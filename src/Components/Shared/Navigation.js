@@ -5,7 +5,8 @@ const Navigation = () => {
     return (
         <div>
             <nav className="container mx-auto flex items-center justify-between">
-                <img className="my-2" src="/images/logo.png" alt="logo" />
+                <Link to="/">
+                <img className="my-2" src="/images/logo.png" alt="logo" /> </Link>
 
                 <ul className="flex items-center">
                     <li className="hover:text-yellow-700 font-medium "> <Link to="/home">Home</Link> </li>

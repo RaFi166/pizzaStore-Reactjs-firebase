@@ -4,6 +4,7 @@ import Products from './Components/Products/Products';
 import Navigation from './Components/Shared/Navigation';
 import Home from './Components/Home/Home';
 import Cart from './Components/Cart/Cart';
+import SingleProduct from './Components/singleProduct/SingleProduct';
 
 function App() {
   return (
@@ -13,12 +14,17 @@ function App() {
 
         <Switch>
 
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
           <Route exact path="/home">
             <Home></Home>
           </Route>
 
-          <Route path="/products">
-            <Products></Products>
+  
+
+          <Route path="/products/:_id">
+            <SingleProduct></SingleProduct>
           </Route>
 
           <Route path="/cart">
