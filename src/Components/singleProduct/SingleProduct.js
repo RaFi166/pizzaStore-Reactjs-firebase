@@ -19,7 +19,7 @@ const SingleProduct = () => {
     return (
         <div>
             <div className=" sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 ml-10 mt-10">
-            <button className="font-medium text-2xl mb-3 cursor-pointer hover:text-yellow-500	" onClick={()=> history.goBack()}>Go Back </button>
+                <button className="font-medium text-2xl mb-3 cursor-pointer hover:text-yellow-500	" onClick={() => history.goBack()}>Go Back </button>
                 <div>
                     <img src={singleProduct.image} alt="" />
                     <p className="ml-12">{singleProduct.name}</p>

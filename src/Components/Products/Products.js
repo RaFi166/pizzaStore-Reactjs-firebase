@@ -2,6 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 const Products = (props) => {
+    const addtoCart = (e, productdata) =>{
+        console.log(productdata);
+
+    }
     const { _id, name, price, size, image } = props.productdata;
     return (
         <div className="ml-10 mt-10">
@@ -15,8 +19,9 @@ const Products = (props) => {
             </div>
             <div className="flex justify-between">
                 <p>{price}Taka</p>
+                
                 <Link to="">
-                    <button style={{ borderRadius: "10px" }} className="bg-yellow-500 px-2 text-white font-medium">
+                    <button onClick={(e)=> {addtoCart(e,props.productdata)}} style={{ borderRadius: "10px" }} className="bg-yellow-500 px-2 text-white font-medium">
                         Add
                     </button>
                 </Link>

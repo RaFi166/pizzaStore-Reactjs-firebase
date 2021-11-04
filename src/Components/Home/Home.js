@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../CartContext';
 import Products from '../Products/Products';
 
 const Home = () => {
+   const{name} = useContext(CartContext);
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -31,13 +33,14 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* products */}
+            {/* products */}{name}
             <div className="container mx-auto pt-10 pb-20 grid md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-5">
+                
                 {
-                    products.map(product => <Products 
-                        key= {product.name}
-                        productdata= {product}
-                         ></Products>)
+                    products.map(product => <Products
+                        key={product.name}
+                        productdata={product}
+                    ></Products>)
                 }
             </div>
 
