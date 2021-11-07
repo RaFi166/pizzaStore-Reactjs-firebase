@@ -5,7 +5,7 @@ import Products from '../Products/Products';
 
 const Home = () => {
    const{name} = useContext(CartContext);
-    const [products, setProducts] = useState([]);
+   const [products, setProducts] = useState([]);
 
     useEffect(() => {
         fetch("/api/products")
@@ -35,7 +35,6 @@ const Home = () => {
 
             {/* products */}{name}
             <div className="container mx-auto pt-10 pb-20 grid md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-5">
-                
                 {
                     products.map(product => <Products
                         key={product.name}
